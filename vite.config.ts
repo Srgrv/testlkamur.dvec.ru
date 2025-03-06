@@ -18,10 +18,10 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
         secure: false, // Отключает проверку SSL-сертификата
-        headers: {
-          // Явно указываем заголовки, которые должны передаваться
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
+        // headers: {
+        //   // Явно указываем заголовки, которые должны передаваться
+        //   Authorization: `Bearer ${localStorage.getItem("token")}`,
+        // },
       },
     },
   },

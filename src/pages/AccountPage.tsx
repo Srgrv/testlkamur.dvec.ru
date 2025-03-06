@@ -1,11 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import {
   Table,
   TableBody,
@@ -15,11 +9,10 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import { useEffect, useState } from "react";
 import type { AppDispatch, RootState } from "@/store";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useNavigate, NavLink } from "react-router-dom";
-import { fetchPayments } from "@/store/slices/payments-slice";
+import { useParams, NavLink } from "react-router-dom";
+
 import { Button } from "@/components/ui/button";
 import { logout } from "@/store/slices/auth-slice";
 import { LogOut } from "lucide-react";

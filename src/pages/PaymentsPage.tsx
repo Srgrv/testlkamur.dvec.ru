@@ -13,7 +13,7 @@ import { RootState, AppDispatch } from "@/store";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchCharges, fetchPayments } from "@/store/slices/payments-slice";
+import { fetchPayments } from "@/store/slices/payments-slice";
 
 function PaymentsPage() {
   const { loadingPayments, error, payments } = useSelector(
