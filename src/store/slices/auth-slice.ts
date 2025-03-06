@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 interface AuthState {
   token: string | null;
@@ -15,7 +16,6 @@ const initialState: AuthState = {
 };
 
 export const initializeAuth = createAsyncThunk("auth/initialize", async () => {
-  console.log("initail");
   const token = localStorage.getItem("token");
   return token;
 });
@@ -27,7 +27,7 @@ export const login = createAsyncThunk(
     { rejectWithValue }
   ) => {
     try {
-      const response = await fetch(`/api/Ext/LogOnExt`, {
+      const response = await fetch(`/${apiUrl}/Ext/LogOnExt`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
